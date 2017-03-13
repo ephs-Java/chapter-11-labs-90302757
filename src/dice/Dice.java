@@ -22,7 +22,37 @@ public class Dice {
 	}
 
 	//write a method to determine if two Dice objects are equals
-	
+	public boolean check(Dice a, Dice b){
+		if(a == b){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	//write a method that prints a Die
+	public String toString() {
+		if(spots == 0){
+			return "0";
+		}
+		else if(spots == 1){
+			return "1";
+		}
+		else if (spots == 2){
+			return "2";
+		}
+		else if (spots == 3){
+			return "3";
+		}
+		else if (spots == 4){
+			return "4";
+		}
+		else if(spots == 5){
+			return "5";
+		}
+		else {
+			return "6";
+		}
+	}
 
 }

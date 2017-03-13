@@ -10,7 +10,7 @@ public class DiceSimulation {
 		// create 2 Dice objects, die1 and die2
 	
 		
-		int count = 0; // number of times the dice were rolled
+		int count = 10000; // number of times the dice were rolled
 		int snakeEyes = 0; // number of times snake eyes is rolled
 		int twos = 0; // number of times double two is rolled
 		int threes = 0; // number of times double three is rolled
@@ -19,6 +19,55 @@ public class DiceSimulation {
 		int sixes = 0; // number of times double six is rolled
 
 		// create 2 dice, roll them 10000 times, and keep track of the doubles.
+		Dice a = new Dice();
+		Dice b = new Dice();
+		for(int i = 0; i < count; i++){
+			a.roll();
+			b.roll();
+			if(a.spots == 1 && b.spots == 1){
+				snakeEyes++;
+			}
+			else if(a.spots == 2 || b.spots == 2){
+				if(a.spots == b.spots){
+					twos += 2;
+				}
+				else {
+					twos++;
+				}
+			}
+			else if(a.spots == 3 || b.spots == 3){
+				if(a.spots == b.spots){
+					threes += 2;
+				}
+				else {
+					threes++;
+				}
+			}
+			else if(a.spots == 4 || b.spots == 4){
+				if(a.spots == b.spots){
+					fours += 2;
+				}
+				else {
+					fours++;
+				}
+			}
+			else if(a.spots == 5 || b.spots == 5){
+				if(a.spots == b.spots){
+					fives += 2;
+				}
+				else {
+					fives++;
+				}
+			}
+			else if(a.spots == 6 || b.spots == 6){
+				if(a.spots == b.spots){
+					sixes += 2;
+				}
+				else {
+					sixes++;
+				}
+			}
+		}
 		// what method(s) do you need to write in the Dice class to make this work?
 		
 		
